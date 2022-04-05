@@ -8,6 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.ToString;
 
 @Data
 @Entity
@@ -18,7 +19,7 @@ public class Employee {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@Column(name = "first_name", nullable = false)
+	@Column(name = "name", nullable = false)
 	private String name;
 	
 	@Column(name = "surname")
@@ -26,5 +27,12 @@ public class Employee {
 
 	@Column(name = "email")
 	private String email;
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", surname=" + surname + ", email=" + email + "]";
+	}
+	
+	
 	
 }

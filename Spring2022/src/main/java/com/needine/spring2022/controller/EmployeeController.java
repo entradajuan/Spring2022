@@ -39,6 +39,7 @@ public class EmployeeController {
 	
 	@PostMapping()
 	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
+		System.out.println("Entrando en saveEmployee!!" + employee.toString());
 		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee), HttpStatus.CREATED);
 	}
 	
