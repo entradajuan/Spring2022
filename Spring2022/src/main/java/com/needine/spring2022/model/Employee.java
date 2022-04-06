@@ -8,9 +8,13 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.ToString;
 
 @Data
+@Getter
+@Setter
 @Entity
 @Table(name="employees")
 public class Employee {
